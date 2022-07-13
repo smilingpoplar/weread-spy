@@ -6,6 +6,7 @@ import LaunchCommand from './commands/launch'
 import CheckCommand from './commands/check'
 import DownloadCommand from './commands/download'
 import OneCommand from './commands/one'
+import ShelfCommand from './commands/shelf'
 
 // enable logs
 if (!process.env.DEBUG) {
@@ -32,6 +33,7 @@ cli.register(GenEpubCommand)
 cli.register(LaunchCommand)
 cli.register(CheckCommand)
 cli.register(OneCommand)
+cli.register(ShelfCommand)
 
 cli.runExit(process.argv.slice(2), {
   ...Cli.defaultContext,

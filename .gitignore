@@ -29,3 +29,7 @@ yarn.lock
 
 # ts
 **/*.tsbuildinfo
+
+# zx
+log/
+booklist
