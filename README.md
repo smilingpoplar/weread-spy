@@ -24,13 +24,13 @@ npm 包正常更新.
 $ pnpm add weread-spy -g
 ```
 
-### <del>或者使用源码</del>
+<!-- ### <del>或者使用源码</del>
 
 - `git clone` 此项目
 - `pnpm i`
 - `pnpm link --global`
 
-这样就可以使用 `weread-spy` 命令了
+这样就可以使用 `weread-spy` 命令了 -->
 
 ## epub 规范 & 阅读器
 
