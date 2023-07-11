@@ -1,11 +1,11 @@
 {
-  "name": "weread-spy",
+  "name": "weread-spy.shelf",
   "description": "weread spy",
   "version": "0.3.0",
   "author": "magicdawn",
   "main": "bin/weread-spy.js",
   "bin": {
-    "weread-spy": "bin/weread-spy.js"
+    "weread-spy.shelf": "bin/weread-spy.js"
   },
   "files": [
     "assets",
@@ -70,7 +70,8 @@
     "swig-templates": "^2.0.3",
     "tslib": "^2.5.0",
     "umi-request": "^1.4.0",
-    "urijs": "^1.19.11"
+    "urijs": "^1.19.11",
+    "weread-spy.shelf": "link:"
   },
   "devDependencies": {
     "@magicdawn/eslint-config": "^0.1.0",

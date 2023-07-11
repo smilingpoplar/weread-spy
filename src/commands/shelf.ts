@@ -31,15 +31,16 @@ export default class extends Command {
     await page.goto('https://weread.qq.com/web/shelf')
     const booklist = await page.$$('.shelfBook')
 
-    let urls: string[] = []
+    let urls: [string, string][] = []
     for (const book of booklist) {
-      const href = await page.evaluate((el) => el.getAttribute('href'), book)
+      const href = await book.evaluate((el) => el.getAttribute('href'))
       if (href?.startsWith('/web/reader/')) {
-        urls.push('https://weread.qq.com' + href)
+        const name = (await book.$eval('.title', (el) => el.textContent)) as string
+        urls.push([name, 'https://weread.qq.com' + href])
       }
     }
 
-    const count = Math.min(parseInt(this.count), urls.length)
+    const count = Math.min(parseInt(this.count, 10), urls.length)
     urls = urls.slice(0, count)
     debug(count + ' books: ' + urls)
 
